@@ -1,6 +1,22 @@
-# Ridu Programming Language
+<p align="center">
+  <img src="assets/logo.png" width="180" alt="Ridu Programming Language Logo" />
+</p>
 
-> **A modern, general-purpose programming language featuring Kotlin-inspired readability, static typing, its own compiler pipeline, custom bytecode instruction set, and dedicated stack-based virtual machine.**
+<h1 align="center">Ridu Programming Language</h1>
+
+<p align="center">
+  <strong>A modern, general-purpose programming language featuring Kotlin-inspired readability, static typing, its own compiler pipeline, custom bytecode instruction set, and dedicated stack-based virtual machine.</strong>
+</p>
+
+<p align="center">
+  <a href="#1-project-overview">Overview</a> •
+  <a href="#2-implementation-status-phase-1-compiler-mvp">Status</a> •
+  <a href="#3-getting-started">Getting Started</a> •
+  <a href="#4-usage--examples">Usage</a> •
+  <a href="#5-language-syntax-examples">Syntax</a> •
+  <a href="#6-visual-studio-code-extension">VS Code Extension</a> •
+  <a href="#8-roadmap-toward-self-hosting">Roadmap</a>
+</p>
 
 ---
 
@@ -187,14 +203,32 @@ println("Logical AND: " + (true && (a == 20)))
 
 ---
 
-## 6. Language Documentation
+## 6. Visual Studio Code Extension
+
+Ridu comes with an official Visual Studio Code editor extension located in [`editors/vscode`](editors/vscode):
+
+- **Syntax Highlighting**: Full TextMate grammar support for `.ridu` files.
+- **Language Configuration**: Automatic brackets, commenting, and smart indentation.
+- **Code Snippets**: Quick templates for `main`, `val`, `var`, `fun`, `println`, `if`, and `while`.
+- **Branded Icon**: Ridu extension icon and file associations.
+
+### Installation
+```bash
+# Install directly into your local VS Code extensions folder
+cp -r editors/vscode ~/.vscode/extensions/ratanazen.ridu-vscode-0.1.0
+```
+Reload or restart Visual Studio Code to start coding with full syntax highlighting.
+
+---
+
+## 7. Language Documentation
 
 - [Language Specification](docs/specification.md): EBNF grammar, lexical elements, and type system rules.
 - [Bytecode & VM Specification](docs/bytecode.md): Binary chunk format, opcode definitions, stack operations, and VM execution semantics.
 
 ---
 
-## 7. Roadmap Toward Self-Hosting
+## 8. Roadmap Toward Self-Hosting
 
 1. **Phase 1 (Completed)**: Custom compiler MVP, lexer, parser, AST, semantic analyzer, bytecode generator, stack-based VM, and CLI.
 2. **Phase 2 (Language Core)**: Functions, closures, control flow (`if`/`else`, `while`), arrays, and return values.
@@ -204,7 +238,7 @@ println("Logical AND: " + (true && (a == 20)))
 
 ---
 
-## 8. License
+## 9. License
 
 Dual-licensed under either of:
 - Apache License, Version 2.0 ([LICENSE-APACHE](LICENSE) or http://www.apache.org/licenses/LICENSE-2.0)
