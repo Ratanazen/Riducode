@@ -1,0 +1,16 @@
+// Variables and Mutability in Ridu
+val language = "Ridu"
+val version = 1
+println("Language: " + language)
+println("Major Version: " + version)
+
+var counter = 10
+println("Initial counter: " + counter)
+counter = counter + 5
+println("Updated counter: " + counter)
+
+{
+    // Block scope demonstration
+    val inner = "Scoped inner value"
+    println(inner)
+}

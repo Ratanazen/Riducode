@@ -1,0 +1,105 @@
+use std::fmt;
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+#[repr(u8)]
+pub enum OpCode {
+    OpConstant = 0x01,
+    OpNil = 0x02,
+    OpTrue = 0x03,
+    OpFalse = 0x04,
+    OpPop = 0x05,
+    OpDefGlobal = 0x06,
+    OpGetGlobal = 0x07,
+    OpSetGlobal = 0x08,
+    OpGetLocal = 0x09,
+    OpSetLocal = 0x0A,
+    OpAdd = 0x0B,
+    OpSubtract = 0x0C,
+    OpMultiply = 0x0D,
+    OpDivide = 0x0E,
+    OpModulo = 0x0F,
+    OpNegate = 0x10,
+    OpNot = 0x11,
+    OpEqual = 0x12,
+    OpNotEqual = 0x13,
+    OpGreater = 0x14,
+    OpGreaterEqual = 0x15,
+    OpLess = 0x16,
+    OpLessEqual = 0x17,
+    OpPrint = 0x18,
+    OpPrintln = 0x19,
+    OpJumpIfFalse = 0x1A,
+    OpJump = 0x1B,
+    OpHalt = 0xFF,
+}
+
+impl OpCode {
+    pub fn from_u8(byte: u8) -> Option<Self> {
+        match byte {
+            0x01 => Some(OpCode::OpConstant),
+            0x02 => Some(OpCode::OpNil),
+            0x03 => Some(OpCode::OpTrue),
+            0x04 => Some(OpCode::OpFalse),
+            0x05 => Some(OpCode::OpPop),
+            0x06 => Some(OpCode::OpDefGlobal),
+            0x07 => Some(OpCode::OpGetGlobal),
+            0x08 => Some(OpCode::OpSetGlobal),
+            0x09 => Some(OpCode::OpGetLocal),
+            0x0A => Some(OpCode::OpSetLocal),
+            0x0B => Some(OpCode::OpAdd),
+            0x0C => Some(OpCode::OpSubtract),
+            0x0D => Some(OpCode::OpMultiply),
+            0x0E => Some(OpCode::OpDivide),
+            0x0F => Some(OpCode::OpModulo),
+            0x10 => Some(OpCode::OpNegate),
+            0x11 => Some(OpCode::OpNot),
+            0x12 => Some(OpCode::OpEqual),
+            0x13 => Some(OpCode::OpNotEqual),
+            0x14 => Some(OpCode::OpGreater),
+            0x15 => Some(OpCode::OpGreaterEqual),
+            0x16 => Some(OpCode::OpLess),
+            0x17 => Some(OpCode::OpLessEqual),
+            0x18 => Some(OpCode::OpPrint),
+            0x19 => Some(OpCode::OpPrintln),
+            0x1A => Some(OpCode::OpJumpIfFalse),
+            0x1B => Some(OpCode::OpJump),
+            0xFF => Some(OpCode::OpHalt),
+            _ => None,
+        }
+    }
+}
+
+impl fmt::Display for OpCode {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        match self {
+            OpCode::OpConstant => write!(f, "OP_CONSTANT"),
+            OpCode::OpNil => write!(f, "OP_NIL"),
+            OpCode::OpTrue => write!(f, "OP_TRUE"),
+            OpCode::OpFalse => write!(f, "OP_FALSE"),
+            OpCode::OpPop => write!(f, "OP_POP"),
+            OpCode::OpDefGlobal => write!(f, "OP_DEF_GLOBAL"),
+            OpCode::OpGetGlobal => write!(f, "OP_GET_GLOBAL"),
+            OpCode::OpSetGlobal => write!(f, "OP_SET_GLOBAL"),
+            OpCode::OpGetLocal => write!(f, "OP_GET_LOCAL"),
+            OpCode::OpSetLocal => write!(f, "OP_SET_LOCAL"),
+            OpCode::OpAdd => write!(f, "OP_ADD"),
+            OpCode::OpSubtract => write!(f, "OP_SUBTRACT"),
+            OpCode::OpMultiply => write!(f, "OP_MULTIPLY"),
+            OpCode::OpDivide => write!(f, "OP_DIVIDE"),
+            OpCode::OpModulo => write!(f, "OP_MODULO"),
+            OpCode::OpNegate => write!(f, "OP_NEGATE"),
+            OpCode::OpNot => write!(f, "OP_NOT"),
+            OpCode::OpEqual => write!(f, "OP_EQUAL"),
+            OpCode::OpNotEqual => write!(f, "OP_NOT_EQUAL"),
+            OpCode::OpGreater => write!(f, "OP_GREATER"),
+            OpCode::OpGreaterEqual => write!(f, "OP_GREATER_EQUAL"),
+            OpCode::OpLess => write!(f, "OP_LESS"),
+            OpCode::OpLessEqual => write!(f, "OP_LESS_EQUAL"),
+            OpCode::OpPrint => write!(f, "OP_PRINT"),
+            OpCode::OpPrintln => write!(f, "OP_PRINTLN"),
+            OpCode::OpJumpIfFalse => write!(f, "OP_JUMP_IF_FALSE"),
+            OpCode::OpJump => write!(f, "OP_JUMP"),
+            OpCode::OpHalt => write!(f, "OP_HALT"),
+        }
+    }
+}

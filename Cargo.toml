@@ -1,0 +1,18 @@
+[package]
+name = "ridu"
+version = "0.1.0"
+edition = "2021"
+authors = ["Ratanazen <Rtnaeam611@gmail.com>"]
+description = "Compiler, bytecode toolchain, and virtual machine for the Ridu programming language"
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+
+[lib]
+name = "ridu"
+path = "src/lib.rs"
+
+[[bin]]
+name = "ridu"
+path = "src/main.rs"
+
+[dependencies]

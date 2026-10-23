@@ -1,0 +1,16 @@
+// Arithmetic, comparisons, and boolean expressions in Ridu
+val a = 15
+val b = 4
+println("a + b = " + (a + b))
+println("a - b = " + (a - b))
+println("a * b = " + (a * b))
+println("a / b = " + (a / b))
+println("a % b = " + (a % b))
+
+val isGreater = a > b
+val isEqual = a == 15
+val logicResult = isGreater && isEqual
+println("isGreater && isEqual: " + logicResult)
+
+val floatVal = 3.5
+println("Float arithmetic: " + (floatVal * 2.0))
