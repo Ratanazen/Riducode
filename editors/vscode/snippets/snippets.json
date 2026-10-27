@@ -1,0 +1,91 @@
+{
+  "Main function": {
+    "prefix": "main",
+    "body": [
+      "fun main() {",
+      "\t${0:println(\"Hello, Ridu!\")}",
+      "}"
+    ],
+    "description": "Main function entry point"
+  },
+  "Val declaration": {
+    "prefix": "val",
+    "body": [
+      "val ${1:name} = ${2:value}"
+    ],
+    "description": "Immutable variable declaration"
+  },
+  "Val with type": {
+    "prefix": "valt",
+    "body": [
+      "val ${1:name}: ${2:Int} = ${3:value}"
+    ],
+    "description": "Typed immutable variable declaration"
+  },
+  "Var declaration": {
+    "prefix": "var",
+    "body": [
+      "var ${1:name} = ${2:value}"
+    ],
+    "description": "Mutable variable declaration"
+  },
+  "Var with type": {
+    "prefix": "vart",
+    "body": [
+      "var ${1:name}: ${2:Int} = ${3:value}"
+    ],
+    "description": "Typed mutable variable declaration"
+  },
+  "Println statement": {
+    "prefix": "println",
+    "body": [
+      "println(${1:expr})"
+    ],
+    "description": "Print line to output"
+  },
+  "Print statement": {
+    "prefix": "print",
+    "body": [
+      "print(${1:expr})"
+    ],
+    "description": "Print to output without newline"
+  },
+  "Function definition": {
+    "prefix": "fun",
+    "body": [
+      "fun ${1:name}(${2:params}): ${3:Unit} {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "Function definition"
+  },
+  "If statement": {
+    "prefix": "if",
+    "body": [
+      "if (${1:condition}) {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "If conditional statement"
+  },
+  "If Else statement": {
+    "prefix": "ifelse",
+    "body": [
+      "if (${1:condition}) {",
+      "\t${2}",
+      "} else {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "If-Else conditional statement"
+  },
+  "While loop": {
+    "prefix": "while",
+    "body": [
+      "while (${1:condition}) {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "While loop"
+  }
+}

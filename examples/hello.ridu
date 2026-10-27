@@ -1,0 +1,4 @@
+// Hello World in Ridu
+val greeting = "Hello, Ridu Programming Language!"
+println(greeting)
+println("Welcome to Phase 1: Custom Compiler & Bytecode VM.")

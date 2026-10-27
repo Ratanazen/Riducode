@@ -1,0 +1,55 @@
+{
+  "name": "ridu-vscode",
+  "displayName": "Ridu",
+  "description": "Rich language support, syntax highlighting, and snippets for the Ridu programming language",
+  "version": "0.1.0",
+  "publisher": "ratanazen",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#800010",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ratanazen/Riducode.git"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "ridu",
+        "aliases": [
+          "Ridu",
+          "ridu"
+        ],
+        "extensions": [
+          ".ridu"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./icon.png",
+          "dark": "./icon.png"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ridu",
+        "scopeName": "source.ridu",
+        "path": "./syntaxes/ridu.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "ridu",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  }
+}
